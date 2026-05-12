@@ -4,7 +4,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 {
     public string GetPromptText()
     {
-        return "[E] 대화하기";
+        return "[E] Talk";
     }
 
     public void Interact()

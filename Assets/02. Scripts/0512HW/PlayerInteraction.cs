@@ -6,51 +6,73 @@ public class PlayerInteraction : MonoBehaviour
 {
     [Header("Ray Settings")]
     [SerializeField] private Camera cam;
-    [SerializeField] private float interactDistance = 3f;
+    [SerializeField] private float interactDistance = 10f;
     [SerializeField] private LayerMask interactableLayer;
 
-    private PlayerInput _pi;
-    private InputAction _fire;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI promptText;
+
+
+    private PlayerInput pi;
+    private InputAction interact;
 
     private IInteractable currentInteractable;
     private void Awake()
     {
-        _pi = GetComponent<PlayerInput>();
-        _fire = _pi.actions.FindAction("Fire", true);
+        pi = GetComponent<PlayerInput>();
+        interact = pi.actions.FindAction("Interact", true);
 
         if (cam == null) cam = Camera.main;
+    }
+
+    private void OnEnable()
+    {
+        interact.performed += HandleInteract;
+    }
+
+    private void OnDisable()
+    {
+
+        interact.performed -= HandleInteract;
     }
 
     private void Update()
     {
         CheckInteractable();
-
-        if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
-        {
-            currentInteractable.Interact();
-        }
     }
+
 
     private void CheckInteractable()
     {
-        Ray ray = new Ray(
-            cam.transform.position,
-            cam.transform.forward
-        );
+        Vector2 _screenCenter = new(Screen.width * 0.5f, Screen.height * 0.5f);
 
-        Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.red);
+        Ray _ray = cam.ScreenPointToRay(_screenCenter);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
+        Debug.DrawRay(_ray.origin, _ray.direction * interactDistance, Color.red);
+
+        if (Physics.Raycast(_ray, out RaycastHit hit, interactDistance, interactableLayer, QueryTriggerInteraction.Ignore))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
             if (interactable != null)
             {
                 currentInteractable = interactable;
+                promptText.text = interactable.GetPromptText();
+                promptText.gameObject.SetActive(true);
                 return;
             }
         }
 
         currentInteractable = null;
+        promptText.gameObject.SetActive(false);
+
+    }
+
+    private void HandleInteract(InputAction.CallbackContext _)
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.Interact();
+        }
     }
 }
