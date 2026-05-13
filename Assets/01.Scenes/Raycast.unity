@@ -907,26 +907,13 @@ PrefabInstance:
       addedObject: {fileID: 785383893}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 785383892}
+      addedObject: {fileID: 785383896}
   m_SourcePrefab: {fileID: 100100000, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
 --- !u!1 &785383891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
   m_PrefabInstance: {fileID: 763880360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &785383892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785383891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6596e50d77cf2c043957f2473fdad123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHp: 20
 --- !u!136 &785383893
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -950,6 +937,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &785383896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785383891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee8d672dac7cbf4c92d9ef29ac69141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemicOverload.Combat.HealthComponent
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1001 &822096654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1146,19 +1147,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
   m_PrefabInstance: {fileID: 1232773357}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &942910920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942910919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6596e50d77cf2c043957f2473fdad123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHp: 20
 --- !u!136 &942910921
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1182,6 +1170,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &942910924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942910919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee8d672dac7cbf4c92d9ef29ac69141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemicOverload.Combat.HealthComponent
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,19 +1693,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
   m_PrefabInstance: {fileID: 2048987559}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1225643561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225643560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6596e50d77cf2c043957f2473fdad123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHp: 20
 --- !u!136 &1225643562
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1727,6 +1716,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1225643565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225643560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee8d672dac7cbf4c92d9ef29ac69141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemicOverload.Combat.HealthComponent
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1001 &1232773357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1792,7 +1795,7 @@ PrefabInstance:
       addedObject: {fileID: 942910921}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 942910920}
+      addedObject: {fileID: 942910924}
   m_SourcePrefab: {fileID: 100100000, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
 --- !u!1 &1297532928 stripped
 GameObject:
@@ -2087,7 +2090,7 @@ PrefabInstance:
       addedObject: {fileID: 1225643562}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1225643561}
+      addedObject: {fileID: 1225643565}
   m_SourcePrefab: {fileID: 100100000, guid: 98c9468a4ebd33944a1edf044c4bc63d, type: 3}
 --- !u!1 &2116198337
 GameObject:
@@ -2755,6 +2758,8 @@ GameObject:
   - component: {fileID: 962231499448245847}
   - component: {fileID: 7042195142840038572}
   - component: {fileID: 7042195142840038573}
+  - component: {fileID: 7042195142840038574}
+  - component: {fileID: 7042195142840038575}
   m_Layer: 0
   m_Name: PlayerArmature
   m_TagString: Player
@@ -4984,6 +4989,46 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &7042195142840038574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962231499448245851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db0ee03c6eab6c44aa58c3137f5f85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemicOverload.Phase1.InputProvider
+  inputActionsAsset: {fileID: -944628639613478452, guid: 395d435f25635cc49aae009995550589, type: 3}
+  resourcesFallbackPath: Input/Phase1Gameplay
+  normalizeDiagonalInput: 1
+  enableDualMouseForwardMove: 1
+  dualMouseForwardAmount: 1
+  gamepadLookDeadzone: 0.15
+--- !u!114 &7042195142840038575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962231499448245851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c5c06f15eae204bbbdcac17ae83bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemicOverload.Combat.TpsMagicSphereCastComponent
+  aimCamera: {fileID: 0}
+  range: 30
+  radius: 0.35
+  damage: 20
+  cooldown: 0.25
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 576
+  hitFxPrefab: {fileID: 0}
+  drawGizmo: 1
 --- !u!1 &7087173376617115551
 GameObject:
   m_ObjectHideFlags: 0

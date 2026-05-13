@@ -43,7 +43,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Melee",
                     "type": "Button",
                     "id": "d1697feb-c5bf-4ee8-a5b5-ea099e722c2b",
                     "expectedControlType": "",
@@ -64,6 +64,15 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "55275b11-0f1b-4dc5-b030-dbb6598303ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Magic",
+                    "type": "Button",
+                    "id": "0dc90b0d-2ace-49b5-a6a5-b6894fca8f9e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -254,7 +263,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Melee",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -277,6 +286,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa4bf45a-6352-4f40-871d-c95f7241245c",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Magic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
